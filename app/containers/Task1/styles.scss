@@ -1,0 +1,36 @@
+.button-class {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.input-class {
+  outline: none;
+  padding:5px; 
+  border:2px solid #ccc; 
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  width: 70px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+  justify-content: space-evenly;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}

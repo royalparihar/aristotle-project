@@ -1,0 +1,23 @@
+.card-wrapper {
+  width: 220px;
+  height: 180px;
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 1rem;
+  position: relative;
+  padding: 10px;
+  overflow-y: auto;
+  border: 1px solid black;
+  .card-header {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .topic-container {
+    font-size: 12px;
+    .topic-class {
+      padding: 10px;
+    }
+  }
+}
