@@ -21,10 +21,10 @@ import './style.scss';
 const App = () => (
   <div className="app-wrapper">
     <Helmet
-      titleTemplate="%s - React.js Boilerplate"
-      defaultTitle="React.js Boilerplate"
+      titleTemplate="%s - Aristotle Project"
+      defaultTitle="Aristotle Project"
     >
-      <meta name="description" content="A React.js Boilerplate application" />
+      <meta name="description" content="Aristotle Tasks" />
     </Helmet>
     <Header />
     <Switch>
