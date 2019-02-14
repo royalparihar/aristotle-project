@@ -1,1 +1,1 @@
-# artistotle-project
+# aristotle-project
