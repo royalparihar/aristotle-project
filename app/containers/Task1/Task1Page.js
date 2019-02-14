@@ -7,7 +7,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import forIn from 'lodash/forIn';
 import QuesMarksInput from './QuesMarksInput';
-import { getFinalScore } from './utils';
+import { getFinalScore, validateInputMarks } from './utils';
 import { Questions } from './constant';
 import NavLink from '../../components/NavLink';
 
@@ -15,10 +15,6 @@ import './styles.scss';
 
 
 export default class TaskPage extends React.Component {
-  // eslint-disable-line react/prefer-stateless-function
-
-  // Since state and props are static,
-  // there's no need to re-render this component
   constructor(props) {
     super(props);
     this.state = {
@@ -26,10 +22,6 @@ export default class TaskPage extends React.Component {
       finalScore: undefined,
     };
   }
-  // shouldComponentUpdate() {
-  //   return false;
-  // }
-
   changeInputValue = (value, key) => {
     const { inputValues } = this.state;
     inputValues[key] = value;
@@ -40,13 +32,13 @@ export default class TaskPage extends React.Component {
 
   showFinalScore = () => {
     const { inputValues } = this.state;
-    if (Object.keys(inputValues).length === Object.keys(Questions).length) {
+    if (validateInputMarks(inputValues)) {
       const finalScore = getFinalScore(inputValues);
       this.setState({
         finalScore,
       });
     } else {
-      alert('Please enter all details');
+      alert('Please enter valid details');
     }
   };
 

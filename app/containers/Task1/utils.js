@@ -1,7 +1,7 @@
-import reduce from 'lodash/reduce';
-import forIn from 'lodash/forIn';
-import values from 'lodash/values';
-import { Groups, Sections } from './constant';
+import { reduce, forIn, values, isEmpty } from 'lodash';
+// import forIn from 'lodash/forIn';
+// import values from 'lodash/values';
+import { Groups, Sections, Questions } from './constant';
 
 const getMarksArray = (marks) => reduce(marks, (arr, value, key) => {
   arr.push({
@@ -68,3 +68,8 @@ export const getFinalScore = (marks) => {
   });
   return totalScore;
 };
+
+export const validateInputMarks = (inputData) => {
+const isValidate = Object.keys(Questions).find((key) => !inputData[key] || Questions[key].maxMark < inputData[key]);
+return !isValidate;
+}
